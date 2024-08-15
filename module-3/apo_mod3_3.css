@@ -1,0 +1,67 @@
+Bella Apo
+Assignment 3.3 - CSS
+
+/* Center the h1 title on the page */
+h1 {
+    text-align: center;
+}
+
+/* Set the width of the side-by-side divs to 45% */
+#container > div {
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+}
+
+/* Set the width of the last div to 100% */
+#container > div:last-child {
+    width: 100%;
+    margin-top: 60%;
+    clear: both;
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* Set the font weight of h3 tags to 500 */
+h3 {
+    font-weight: 500;
+}
+
+/* Set the font weight of list items to 300 */
+ol, ul {
+    font-weight: 300;
+}
+
+/* Style the ordered list (Top 10 Favorite Books) */
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+/* Apply the same border style to the h3 tag above the ordered list */
+ol + h3 {
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+/* Style the unordered list (5 Things I’ve Learned) */
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+/* Apply the same border style to the h3 tag above the unordered list */
+ul + h3 {
+    border: 1px dashed red;
+    border-radius: 15px;
+}
+
+/* Add hover effect to links */
+a:hover {
+    text-decoration: underline;
+}
