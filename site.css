@@ -10,24 +10,24 @@
 
 /* Headings (h1, h2, h3, h4) Styling */
 h1, h2, h3, h4 {
-    background-color: #E3E1F5;
-    color: #2C2A35;
-    border: 1px solid #B8A200;
+    background-color: #D8E3DC;
+    color: #2C3E3D;
+    border: 1px solid #A3B9A5;
     padding: 10px;
 }
 
 /* Anchor Tag Styling */
 a {
-    color: #5A4FCF; 
+    color: #6B8F71; 
     text-decoration: none;
 }
 
 /* Anchor Hover Styling */
 a:hover {
-    color: #7B6DFF; 
+    color: #89A78F; 
 }
 
 /* Anchor Visited Styling */
 a:visited {
-    color: #CF5A4F; 
+    color: #8F6B71; 
 }
