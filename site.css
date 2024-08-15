@@ -1,1 +1,33 @@
+/* Google Font Kit Setup */
+@import url('https://fonts.googleapis.com/css2?family=YourChosenFont:wght@400;700&display=swap');
 
+/* Container Styling */
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Headings (h1, h2, h3, h4) Styling */
+h1, h2, h3, h4 {
+    background-color: #F0EDFF;
+    color: #181719;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+/* Anchor Tag Styling */
+a {
+    color: #dfa1ff; 
+    text-decoration: none;
+}
+
+/* Anchor Hover Styling */
+a:hover {
+    color: #B0A1FF; 
+}
+
+/* Anchor Visited Styling */
+a:visited {
+    color: #ffb0a1; 
+}
