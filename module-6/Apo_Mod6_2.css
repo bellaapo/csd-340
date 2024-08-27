@@ -1,0 +1,96 @@
+<!--
+    Bella Apo
+    Assignment 6.2 - CSS
+    August 27, 2024
+-->
+
+/* Styles for header */
+header {
+    background-color: #2E8B57; /* SeaGreen */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for h1 */
+h1 {
+    font-weight: 400;
+}
+
+/* Styles for navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #006400; /* DarkGreen */
+    border-bottom: solid 15px #8FBC8F; /* DarkSeaGreen */
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white; 
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #8FBC8F; /* DarkSeaGreen */
+    color: #2E8B57; /* SeaGreen */
+}
+
+/* Styles for container */
+#container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+}
+
+/* Styles for card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for card-title */
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #006400; /* DarkGreen */
+    font-weight: 400;
+}
+
+/* Styles for card-content */
+.card-content {
+    padding: 2px 16px;
+}
+
+/* Styles for footer */
+footer {
+    background-color: #2E8B57; /* SeaGreen */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color: white; 
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
