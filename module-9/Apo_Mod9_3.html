@@ -1,0 +1,59 @@
+<!--
+  Bella Apo
+  Assignment 9.3
+  SSeptember 15, 2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="This page follows the guidelines in the module 9.3 assignment.">
+    <meta name="author" content="Bella Apo">
+    <meta name="keywords" content="HTML, CSS, assignment">
+  
+    <link rel="stylesheet" href="Apo_Mod9_3.css">
+</head>
+<body>
+<div id="container">
+</div>
+<h1>
+Assignment 9.3: JavaScript - Part 1
+</h1>
+
+<p>
+  Joywave is an American indie rock band from Rochester, New York, known for their unique sound that blends <span class="blank" id="word1">_____</span> and rock music. The band's energetic performances and clever lyricism have helped them build a dedicated following since their formation in 2010.
+</p>
+
+<p>
+  They gained widespread attention with their hit single "Dangerous," a collaboration with their friend Big Data, which dominated alternative radio stations. They then gained major success as being the music featured in the original Fortnite trailor. The band's music is often described as a mix of <span class="blank" id="word2">_____</span> and experimental sounds, giving them a distinct place in the indie music scene.
+</p>
+
+<p>
+  Joywave's albums, including "Permanent Pleasure" and "Possession", showcase their <span class="blank" id="word3">_____</span> approach to music, with tracks that range from danceable to introspective to existential. Their creativity knows no bounds, as they continue to push the limits of what alternative music can be. Fans love their quirky and humorous personalities, which come through not only in their music but also in their <span class="blank" id="word4">_____</span> interviews and online presence.
+</p>
+
+<button onclick="replaceText('word1', word1)">Replace word 1</button>
+<button onclick="replaceText('word2', word2)">Replace word 2</button>
+<button onclick="replaceText('word3', word3)">Replace word 3</button>
+<button onclick="replaceText('word4', word4)">Replace word 4</button>
+
+<script>
+  // Declare variables to hold the string inputs for the span tags
+  var word1 = "electronic";
+  var word2 = "synth-pop";
+  var word3 = "innovative";
+  var word4 = "witty";
+
+  // Function to replace blank text in span elements
+  function replaceText(spanId, word) {
+      document.getElementById(spanId).textContent = word;
+  }
+</script>
+
+</body>
+</html>
+</script>
+
+</body>
+</html>
