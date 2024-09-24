@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #2a9d8f;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+            border: 2px solid #333;
+        }
+        .output {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #264653;
+        }
+    </style>
+    <script>
+        function displayMessage(imageId) {
+            var messageArea = document.getElementById('message');
+            var message = '';
+            
+            if (imageId === 'image1') {
+                message = "You ran into Luca.";
+            } else if (imageId === 'image2') {
+                message = "Luca ran away!";
+            } else if (imageId === 'image3') {
+                message = "You found Bean hanging out in your bed!";
+            } else if (imageId === 'image4') {
+                message = "He's ready for business!!";
+            }
+            
+            // Update the message in the output area
+            messageArea.textContent = message;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    
+    <div class="image-container">
+        <img id="luca" src="luca.jpg" alt="Black and white shih tzu sitting on the kitchen floor. The kitchen is all white with stainless steel appliances." onclick="displayMessage('image1')">
+        <img id="lucarunning" src="lucarunning.jpg" alt="Black and white shih tzu running out of frame. " onclick="displayMessage('image2')">
+        <img id="bean" src="bean.jpg" alt="Small yorkie bundled up in blanked in bed, with a hand pointing at him." onclick="displayMessage('image3')">
+        <img id="beanattention" src="beanattention.jpg" alt="Small yorkie, wearing a t-shirt, sitting on a bed." onclick="displayMessage('image4')">
+    </div> 
+    
+    <div class="output">
+        <p id="message">Click an image to see its message!</p>
+    </div>
+
+</body>
+</html>
