@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #920061;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+        }
+        #list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <h4>This is an interactive To Do list. Input your tasks and click "Add". Click the "Display" button to display your current list. To delete the last inputted item, click "Delete". </h4>
+
+    <!-- Textbox for user's input -->
+    <input type="text" id="inputItem" placeholder="Enter an item">
+
+    <!-- Buttons to add, delete, and display items -->
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteLastItem()">Delete Last Entry</button>
+    <button onclick="displayItems()">Display</button>
+
+    <!-- Div to display the list -->
+    <div id="list"></div>
+
+    <script>
+        // Initialize an empty array
+        let itemsArray = [];
+
+        // Function to add an item to the array
+        function addItem() {
+            const inputField = document.getElementById('inputItem');
+            const item = inputField.value;
+
+            if (item) {
+                itemsArray.push(item);  // Add the item to the array
+                alert(`Added "${item}" at position ${itemsArray.length}`);
+                inputField.value = '';  // Clear the input field
+            } else {
+                alert('Please enter an item to add.');
+            }
+        }
+
+        // Function to delete the last item in the array
+        function deleteLastItem() {
+            if (itemsArray.length > 0) {
+                const removedItem = itemsArray.pop();  // Remove the last item
+                alert(`Deleted last entry: "${removedItem}"`);
+            } else {
+                alert('No items to delete.');
+            }
+        }
+
+        // Function to display the contents of the array
+        function displayItems() {
+            const listDiv = document.getElementById('list');
+            listDiv.innerHTML = '';  // Clear previous contents
+
+            if (itemsArray.length === 0) {
+                listDiv.innerHTML = '<p>No items in the list.</p>';
+            } else {
+                let displayContent = '<ol>';  // Ordered list for numbered items
+                itemsArray.forEach((item, index) => {
+                    displayContent += `<li>${item}</li>`;
+                });
+                displayContent += '</ol>';
+                listDiv.innerHTML = displayContent;
+            }
+        }
+    </script>
+
+</body>
+</html>
