@@ -1,0 +1,92 @@
+<!--
+  Bella Apo
+  Assignment 12.2
+October 7, 2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="apo_mod12_2.css">
+</head>
+<body>
+<div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <div style="display: flex; justify-content: space-between;">
+        <div style="width: 45%;">
+            <h3>My Top 10 Favorite Books</h3>
+
+            <!-- This div will be used to display the books -->
+            <div id="book-list"></div>
+
+            <!-- Buttons for sorting the book array inside the book section -->
+            <div style="margin-top: 10px;">
+                <button onclick="displayBooks('asc')">Top to Bottom</button>
+                <button onclick="displayBooks('desc')">Bottom to Top</button>
+            </div>
+        </div>
+
+        <div style="width: 45%;">
+            <h3>5 Things I've Learned Since This Course Started</h3>
+            <ul>
+                <li>I learned how to make an ordered list.</li>
+                <li>I learned how to change the text/background color.</li>
+                <li>I learned different formatting tips, like indentation and borders around the text.</li>
+                <li>I learned about the importance of different UI/UX designs and how they directly impact the users.</li>
+                <li>I learned more about GitHub's functionality, specifically being able to open HTML pages directly within the website.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="width: 100%; margin-top: 60%;">
+        <a href="https://github.com/bellaapo/csd-340/blob/main/index.html" style="float: right;">Back to Landing Page</a>
+    </div>
+</div>
+
+<!-- JavaScript section -->
+<script>
+    // Array of favorite books
+    const books = [
+        "A Little Life by Hanya Yanagihara",
+        "1Q84 by Haruki Murakami",
+        "Looking for Alaska by John Green",
+        "The Outsiders by S.E. Hinton",
+        "Jasper Jones by Craig Silvey",
+        "The Complete Persepolis by Marjane Satrapi",
+        "Fangirl by Rainbow Rowell",
+        "Radio Silence by Alice Oseman",
+        "Eleanor Oliphant Is Completely Fine by Gail Honeyman",
+        "Wilder Girls by Rory Power"
+    ];
+
+    // Function to display the books
+    function displayBooks(order) {
+        let bookListDiv = document.getElementById("book-list");
+        let sortedBooks = [];
+
+        if (order === 'asc') {
+            sortedBooks = [...books].sort(); // Sort in ascending order
+        } else if (order === 'desc') {
+            sortedBooks = [...books].sort().reverse(); // Sort in descending order
+        }
+
+        // Display the sorted books
+        let htmlContent = "<ol>";
+        for (let book of sortedBooks) {
+            htmlContent += `<li>${book}</li>`;
+        }
+        htmlContent += "</ol>";
+
+        bookListDiv.innerHTML = htmlContent;
+    }
+
+    // Initial display of books (in ascending order by their default)
+    displayBooks('asc');
+</script>
+
+</body>
+</html>

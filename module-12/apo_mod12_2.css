@@ -1,0 +1,86 @@
+/*
+    Bella Apo
+    Assignment 12.2 - css
+    August 19, 2024
+*/
+
+/* Centering the h1 title on the page */
+h1 {
+    text-align: center;
+}
+
+/* Set the width of the side-by-side divs to 45% */
+#container > div {
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+}
+
+/* Set the width of the last div */
+#container > div:last-child {
+    width: 100%;
+    margin-top: 60%;
+    clear: both;
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* Set the font weight of h3 tags */
+h3 {
+    font-weight: 500;
+}
+
+/* Set the font weight of list items */
+ol, ul {
+    font-weight: 300;
+}
+
+/* Style the ordered list */
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+/* Apply the same border style to the h3 tag above the ordered list */
+ol + h3 {
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+/* Style the unordered list */
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+/* Apply the same border style to the h3 tag above the unordered list */
+ul + h3 {
+    border: 1px dashed red;
+    border-radius: 15px;
+}
+
+/* Add a hover effect to links */
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Styling for the book list displayed by JavaScript */
+#book-list {
+    border: 2px solid #000080; /* Navy border */
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Style the ordered list inside the book-list */
+#book-list ol {
+    list-style-type: decimal; /* Use decimal numbering */
+    padding-left: 20px;
+}
